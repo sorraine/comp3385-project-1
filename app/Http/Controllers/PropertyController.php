@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Property;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -12,6 +14,14 @@ class PropertyController extends Controller
          return view('properties.create');
      }
  
+     public function postform(Request $request): RedirectResponse{
+        $validated = $request->validate([
+            'name' => 'required'
+        ]);
+
+        return redirect("/properties");
+     }
+
      // Method for displaying a list of all properties
      public function index()
      {
@@ -25,4 +35,6 @@ class PropertyController extends Controller
          $property = Property::findOrFail($property_id);
          return view('properties.show', compact('property'));
      }
+
+     
 }
