@@ -11,7 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // here 
+        Schema::create('properties', function (Blueprint $table) {
+
+
+        });
     }
 
     /**
