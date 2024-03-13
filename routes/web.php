@@ -26,7 +26,7 @@ Route::get('/about', function () {
 
 // Route for displaying the form to add a new property
 Route::get('/properties/create', [PropertyController::class, 'createForm'])->name('properties.create');
-Route::post('/properties/create', [PropertyController::class, 'postForm'])->name('properties.add');
+Route::post('/properties/create', [PropertyController::class, 'postform'])->name('properties.add');
 
 // Route for displaying a list of all properties
 Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');

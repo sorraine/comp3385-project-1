@@ -3,7 +3,7 @@
 
 @section('content')
 
-<form action="/properties" enctype="multipart/form-data" method="post">            
+<form action="/properties/create" enctype="multipart/form-data" method="post">            
     @csrf
     <input type="hidden" name="_token" value="{{  csrf_token() }}">
     <div class="mb-3">
