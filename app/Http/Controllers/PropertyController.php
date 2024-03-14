@@ -50,8 +50,8 @@ class PropertyController extends Controller
      // Method for displaying a list of all properties
      public function index()
      {
-         $properties = Property::all();
-         return view('properties.index', compact('properties'));
+         $properties = Property::all(); 
+         return view('property', ['properties' => $properties]);
      }
  
      // Method for viewing an individual property by the specific property id
