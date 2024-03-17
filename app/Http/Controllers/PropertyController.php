@@ -44,7 +44,7 @@ class PropertyController extends Controller
         $property->propertyphoto = $path;
         $property->save();
 
-        return redirect("/property") -> with ('success', 'Property registered successfully');
+        return redirect("/properties") -> with ('success', 'Property registered successfully');
      }
 
      // Method for displaying a list of all properties
