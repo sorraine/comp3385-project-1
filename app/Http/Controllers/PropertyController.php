@@ -16,14 +16,14 @@ class PropertyController extends Controller
  
      public function postform(Request $request): RedirectResponse{
         $validated = $request->validate([
-            'title' => 'required',
-            'numBedrooms' => 'required',
-            'numBathrooms' => 'required',
-            'location' => 'required',
-            'price' => 'required',
-            'type'  => 'required',
-            'description' => 'required',
-            'photo' => 'required | file | image | max:2048', 
+            'title' => 'required|string',
+            'numBedrooms' => 'required|integer',
+            'numBathrooms' => 'required|integer',
+            'location' => 'required|string',
+            'price' => 'required|numeric',
+            'type'  => 'required|string',
+            'description' => 'required|string',
+            'photo' => 'required|file|image|max:2048', 
 
 
 

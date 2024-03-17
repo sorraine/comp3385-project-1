@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="display-5 fw-bold text-body-emphasis">Dashboard</h1>
+    <h1 class="display-5 fw-bold text-body-emphasis">Properties</h1>
 
  
 
@@ -36,7 +36,7 @@
             </p>
 
             <p class="badge rounded-pill bg-primary">
-            <strong>{{ $property->price }}</strong> <br>
+            <strong>${{ $property->price }}</strong> <br>
             </p>
 
 
@@ -44,7 +44,7 @@
     <a class="text-decoration-none text-white" href="/properties/{{$property->id}}">
         
 
-        <div class="text-center card-footer bg-info"> 
+        <div class="text-center card-footer" style= "background:#15bba8;"> 
     view property
 
         </div>

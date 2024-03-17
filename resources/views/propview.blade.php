@@ -4,15 +4,15 @@
 
  <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <img src="{{ url('storage/' . $property->propertyphoto) }}" class="img-fluid rounded-start" alt="...">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6">
       <div class="card-body">
         <h5 class="card-title">{{ $property->title }}</h5> 
 
         
-        <p class="card-text badge rounded-pill bg-primary"> {{$property->price}} </p>
+        <p class="card-text badge rounded-pill bg-primary"> ${{$property->price}} </p>
 
 
         <p class="card-text badge rounded-pill bg-warning"> {{$property->type}} </p>
@@ -36,9 +36,9 @@
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0  0 0 6"/> 
                         </svg>
                          {{$property->location}} </p>
-        <button type="submit" class=" text-white btn btn-info" disabled>Email Realtor</button>
+        <button type="submit" class=" text-white btn " style="background:#15bba8;" disabled>Email Realtor</button>
         
-      </div>
+</div>
     </div>
   </div>
 </div>
